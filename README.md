@@ -1,12 +1,12 @@
-# movie_review
+# movie_review 
 
-##目的 
+## 目的 
 映画レビューの内容が肯定的か、否定的かを分類するモデルをつくる
 
-##データセット 
+## データセット 
 (https://ai.stanford.edu/~amaas/data/sentiment/) に公開されているLarge Movie Review Dataset v1.0を用いた。
 
-##データの中身 
+## データの中身 
     trainフォルダー
         posフォルダー：ポジティブレヴュー（1万2500件  
         negフォルダー：ネガティブレヴュー（1万2500件)  
@@ -18,7 +18,7 @@
   
  
 
-##前処理 
+## 前処理 
 1.HTMLマークアップや句読点を正規表現ライブラリをつかって削除  
 2.レヴュー文をトークン化する  
 以下の2パターンを試した  
@@ -30,7 +30,7 @@
     →[‘he’, ‘earn’, ‘enough’, ‘credit’, ‘to’, ‘graduate’ ]  
 
 
-##特徴量抽出
+## 特徴量抽出
 1.BoW  
 単純に各単語の出現回数で重みづけをする  
 
@@ -39,7 +39,7 @@
 
 2パターン試して結果を比較  
 
-##学習手法 
+## 学習手法 
 学習手法  
 　ーロジスティクス回帰  
 
@@ -54,7 +54,7 @@
 　ー単に空白文字で区切る  
 
 
-##結果 
+## 結果 
 BoWでの特徴量抽出  
 訓練データでの3分割交差検証の平均	accuracy 0.874  
 テストデータ				accuracy 0.880  
@@ -67,5 +67,5 @@ BoWと比較してTF-IDFの方が約2％ほど正解率が高い
 
 
 
-##参考文献
-Sebastian Raschka 「第3版Python機械学習プログラミング」
+## 参考文献
+Sebastian Raschka 「第3版Python機械学習プログラミング」(https://www.amazon.co.jp/dp/B08LYWFPQ9/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
